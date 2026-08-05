@@ -1,0 +1,18 @@
+VERÖFFENTLICHUNGSPRÜFUNG
+
+Domain: felixharren.de
+GitHub-Benutzer: FullBlogg
+Empfohlenes Repository: FullBlogg.github.io
+
+Geprüft:
+- Canonical-Links
+- Open-Graph-URLs
+- absolute Vorschaubild-Adresse
+- Sitemap
+- robots.txt
+- CNAME
+- .nojekyll
+- 404-Seite
+- Beispieltermine entfernt
+
+Ergebnis: bereit für den Upload zu GitHub.

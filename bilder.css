@@ -1,0 +1,2391 @@
+/* ==================================================
+   BILDER UND VISUELLE SEITENLAYOUTS
+   ================================================== */
+
+
+/* ---------- Startseite: vollflächiges Hero-Bild ---------- */
+
+#start.start-mit-bild {
+    position: relative;
+    isolation: isolate;
+
+    min-height: calc(100svh - 104px);
+
+    background: transparent;
+    box-shadow: none;
+    clip-path: none;
+
+    overflow: visible;
+}
+
+#start.start-mit-bild::before {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+
+    width: 100vw;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(4, 4, 4, 0.93) 0%,
+            rgba(4, 4, 4, 0.78) 42%,
+            rgba(4, 4, 4, 0.34) 72%,
+            rgba(4, 4, 4, 0.48) 100%
+        ),
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.18) 0%,
+            rgba(0, 0, 0, 0.28) 100%
+        ),
+        url("bilder/orgel/orgel-speyer-quer.JPG");
+
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    content: "";
+
+    transform: translateX(-50%);
+}
+
+#start.start-mit-bild > * {
+    position: relative;
+    z-index: 1;
+}
+
+#start.start-mit-bild h2 {
+    max-width: 820px;
+
+    color: #ffffff;
+
+    font-size:
+        clamp(
+            3rem,
+            5.4vw,
+            5rem
+        );
+
+    line-height: 1.1;
+    letter-spacing: 0.018em;
+
+    text-wrap: balance;
+    text-shadow:
+        0 2px 24px rgba(0, 0, 0, 0.35);
+}
+
+#start.start-mit-bild p {
+    max-width: 650px;
+
+    color: rgba(255, 255, 255, 0.82);
+
+    text-shadow:
+        0 2px 18px rgba(0, 0, 0, 0.45);
+}
+
+
+/* ---------- Über mich: Bild-Text-Einstieg ---------- */
+
+.ueber-mich-einstieg {
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem;
+}
+
+.ueber-mich-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 0.92fr)
+        minmax(360px, 1.08fr);
+
+    align-items: center;
+
+    gap:
+        clamp(
+            2.5rem,
+            6vw,
+            6rem
+        );
+}
+
+.ueber-mich-intro {
+    min-width: 0;
+}
+
+.ueber-mich-intro h2 {
+    max-width: 620px;
+}
+
+.ueber-mich-intro p:last-child {
+    margin-bottom: 0;
+}
+
+.ueber-mich-portrait {
+    position: relative;
+
+    margin: 0;
+}
+
+.ueber-mich-portrait::after {
+    position: absolute;
+    z-index: -1;
+    top: 1rem;
+    right: -1rem;
+    bottom: -1rem;
+    left: 1rem;
+
+    border: 1px solid var(--holz);
+
+    content: "";
+}
+
+.ueber-mich-portrait img {
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 3 / 2;
+
+    border: 1px solid rgba(255, 255, 255, 0.16);
+
+    object-fit: cover;
+    object-position: 58% center;
+
+    box-shadow:
+        0 24px 70px rgba(0, 0, 0, 0.34);
+}
+
+
+/* ---------- Tablet ---------- */
+
+@media (max-width: 1050px) {
+    #start.start-mit-bild {
+        min-height: calc(100svh - 98px);
+    }
+
+    .ueber-mich-grid {
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(300px, 0.9fr);
+
+        gap: 3rem;
+    }
+}
+
+
+/* ---------- Smartphone ---------- */
+
+@media (max-width: 760px) {
+    #start.start-mit-bild {
+        min-height: calc(100svh - 82px);
+
+        justify-content: flex-end;
+
+        padding-top: 7rem;
+        padding-bottom: 4.5rem;
+    }
+
+    #start.start-mit-bild::before {
+        background-image:
+            linear-gradient(
+                180deg,
+                rgba(4, 4, 4, 0.30) 0%,
+                rgba(4, 4, 4, 0.58) 43%,
+                rgba(4, 4, 4, 0.94) 100%
+            ),
+            url("bilder/orgel/orgel-speyer-quer.JPG");
+
+        background-position: 58% bottom;
+    }
+
+    #start.start-mit-bild h2 {
+        max-width: 560px;
+
+        font-size:
+            clamp(
+                2.35rem,
+                11vw,
+                3.6rem
+            );
+    }
+
+    .ueber-mich-einstieg {
+        padding-top: 4rem;
+        padding-bottom: 4.5rem;
+    }
+
+    .ueber-mich-grid {
+        grid-template-columns: 1fr;
+
+        gap: 3rem;
+    }
+
+    .ueber-mich-portrait {
+        width: calc(100% - 0.75rem);
+    }
+
+    .ueber-mich-portrait::after {
+        top: 0.75rem;
+        right: -0.75rem;
+        bottom: -0.75rem;
+        left: 0.75rem;
+    }
+}
+
+
+/* ---------- Sehr kleine Bildschirme ---------- */
+
+@media (max-width: 430px) {
+    #start.start-mit-bild {
+        min-height: calc(100svh - 76px);
+    }
+
+    .ueber-mich-portrait img {
+        aspect-ratio: 4 / 3;
+        object-position: 62% center;
+    }
+}
+
+
+/* ==================================================
+   KIRCHENMUSIK: BILD-TEXT-BEREICHE
+   ================================================== */
+
+.bild-text-bereich {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 0.92fr)
+        minmax(340px, 1.08fr);
+
+    align-items: center;
+
+    gap:
+        clamp(
+            2.5rem,
+            6vw,
+            6rem
+        );
+}
+
+.bild-text-bereich.bild-links .bild-text-inhalt {
+    order: 2;
+}
+
+.bild-text-bereich.bild-links .seitenbild {
+    order: 1;
+}
+
+.bild-text-inhalt {
+    min-width: 0;
+}
+
+.bild-text-inhalt p:last-child {
+    margin-bottom: 0;
+}
+
+.seitenbild,
+.breites-seitenbild {
+    position: relative;
+
+    margin: 0;
+}
+
+.seitenbild::after,
+.breites-seitenbild::after {
+    position: absolute;
+    z-index: -1;
+
+    border: 1px solid var(--holz);
+
+    content: "";
+}
+
+.seitenbild::after {
+    top: 0.9rem;
+    right: -0.9rem;
+    bottom: -0.9rem;
+    left: 0.9rem;
+}
+
+.bild-links .seitenbild::after {
+    right: 0.9rem;
+    left: -0.9rem;
+}
+
+.seitenbild img {
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 3 / 2;
+
+    border: 1px solid var(--linie);
+
+    object-fit: cover;
+    object-position: center;
+
+    box-shadow:
+        0 22px 60px rgba(0, 0, 0, 0.18);
+}
+
+.breites-bild-sektion {
+    padding-bottom: 7rem;
+}
+
+.breites-bild-text {
+    max-width: 760px;
+
+    margin-bottom: 3rem;
+}
+
+.breites-seitenbild {
+    width: 100%;
+}
+
+.breites-seitenbild::after {
+    top: 1rem;
+    right: -1rem;
+    bottom: -1rem;
+    left: 1rem;
+}
+
+.breites-seitenbild img {
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 16 / 8.5;
+
+    border: 1px solid var(--linie);
+
+    object-fit: cover;
+    object-position: center 58%;
+
+    box-shadow:
+        0 24px 70px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ---------- Tablet ---------- */
+
+@media (max-width: 980px) {
+    .bild-text-bereich {
+        grid-template-columns: 1fr;
+
+        gap: 3rem;
+    }
+
+    .bild-text-bereich.bild-links .bild-text-inhalt,
+    .bild-text-bereich.bild-links .seitenbild {
+        order: initial;
+    }
+
+    .seitenbild {
+        width: calc(100% - 0.8rem);
+    }
+}
+
+
+/* ---------- Smartphone ---------- */
+
+@media (max-width: 700px) {
+    .bild-text-bereich {
+        gap: 2.4rem;
+    }
+
+    .seitenbild::after {
+        top: 0.7rem;
+        right: -0.7rem;
+        bottom: -0.7rem;
+        left: 0.7rem;
+    }
+
+    .bild-links .seitenbild::after {
+        right: -0.7rem;
+        left: 0.7rem;
+    }
+
+    .seitenbild img {
+        aspect-ratio: 4 / 3;
+    }
+
+    .breites-bild-text {
+        margin-bottom: 2.4rem;
+    }
+
+    .breites-seitenbild {
+        width: calc(100% - 0.7rem);
+    }
+
+    .breites-seitenbild::after {
+        top: 0.7rem;
+        right: -0.7rem;
+        bottom: -0.7rem;
+        left: 0.7rem;
+    }
+
+    .breites-seitenbild img {
+        aspect-ratio: 4 / 3;
+    }
+}
+
+
+/* ==================================================
+   PROJEKTE: MAGAZIN-LAYOUT
+   ================================================== */
+
+
+/* ---------- Großes Auftaktbild mit Textkarte ---------- */
+
+.projekt-aufmacher {
+    position: relative;
+
+    padding-top: 1rem;
+    padding-bottom: 8.5rem;
+}
+
+.projekt-aufmacher-bild {
+    position: relative;
+
+    width: min(100%, 1080px);
+    margin: 0;
+}
+
+.projekt-aufmacher-bild::after {
+    position: absolute;
+    z-index: -1;
+    top: 1rem;
+    right: -1rem;
+    bottom: -1rem;
+    left: 1rem;
+
+    border: 1px solid var(--holz);
+
+    content: "";
+}
+
+.projekt-aufmacher-bild img {
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 16 / 9;
+
+    border: 1px solid var(--linie);
+
+    object-fit: cover;
+    object-position: center 48%;
+
+    box-shadow:
+        0 26px 75px rgba(0, 0, 0, 0.22);
+}
+
+.projekt-aufmacher-text {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    bottom: 3.5rem;
+
+    width: min(520px, 48%);
+
+    padding:
+        clamp(2rem, 4vw, 3.4rem);
+
+    border: 1px solid var(--linie);
+
+    background-color: var(--flaeche);
+    box-shadow: var(--schatten);
+}
+
+.projekt-aufmacher-text h2 {
+    margin-bottom: 1.3rem;
+}
+
+.projekt-aufmacher-text p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ---------- Hochformatiges Konzertbild ---------- */
+
+.projekt-hochformat {
+    display: grid;
+
+    grid-template-columns:
+        minmax(330px, 0.82fr)
+        minmax(0, 1.18fr);
+
+    align-items: center;
+
+    gap:
+        clamp(
+            3rem,
+            8vw,
+            7rem
+        );
+
+    padding-top: 6rem;
+    padding-bottom: 7rem;
+}
+
+.projekt-hochformat-bild {
+    position: relative;
+
+    margin: 0;
+}
+
+.projekt-hochformat-bild::after {
+    position: absolute;
+    z-index: -1;
+    top: 1rem;
+    right: -1rem;
+    bottom: -1rem;
+    left: 1rem;
+
+    border: 1px solid var(--holz);
+
+    content: "";
+}
+
+.projekt-hochformat-bild img {
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 4 / 5;
+
+    border: 1px solid var(--linie);
+
+    object-fit: cover;
+    object-position: center 55%;
+
+    box-shadow:
+        0 24px 68px rgba(0, 0, 0, 0.2);
+}
+
+.projekt-hochformat-text {
+    max-width: 660px;
+}
+
+.projekt-hochformat-text p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ---------- Zwei Projektkarten ---------- */
+
+.projekt-karten-sektion {
+    padding-top: 6rem;
+    padding-bottom: 7rem;
+}
+
+.projekt-karten-einleitung {
+    max-width: 760px;
+    margin-bottom: 3.5rem;
+}
+
+.projekt-karten {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    align-items: start;
+
+    gap:
+        clamp(
+            1.8rem,
+            4vw,
+            3.5rem
+        );
+}
+
+.projekt-karte {
+    overflow: hidden;
+
+    border: 1px solid var(--linie);
+
+    background-color: var(--flaeche);
+    box-shadow: var(--schatten);
+}
+
+.projekt-karte figure {
+    margin: 0;
+
+    overflow: hidden;
+}
+
+.projekt-karte img {
+    width: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.45s ease;
+}
+
+.projekt-karte:hover img {
+    transform: scale(1.025);
+}
+
+.projekt-karte-hoch img {
+    height: clamp(380px, 48vw, 610px);
+
+    object-position: center 38%;
+}
+
+.projekt-karte-quer {
+    margin-top: 5rem;
+}
+
+.projekt-karte-quer img {
+    height: clamp(300px, 34vw, 450px);
+
+    object-position: center;
+}
+
+.projekt-karte-text {
+    padding:
+        clamp(
+            1.7rem,
+            3.4vw,
+            2.7rem
+        );
+}
+
+.projekt-karte-text h3 {
+    font-size:
+        clamp(
+            1.55rem,
+            2.5vw,
+            2.1rem
+        );
+}
+
+.projekt-karte-text p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ---------- Ausblick ---------- */
+
+.projekt-ausblick {
+    display: grid;
+
+    grid-template-columns:
+        minmax(250px, 0.72fr)
+        minmax(0, 1.28fr);
+
+    gap:
+        clamp(
+            2.5rem,
+            7vw,
+            6rem
+        );
+
+    padding-top: 5.5rem;
+    padding-bottom: 6.5rem;
+
+    border-top: 1px solid var(--linie);
+    border-bottom: 1px solid var(--linie);
+}
+
+.projekt-ausblick h2 {
+    margin-bottom: 0;
+}
+
+.projekt-ausblick > div:last-child p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ---------- Tablet ---------- */
+
+@media (max-width: 980px) {
+    .projekt-aufmacher {
+        padding-bottom: 4rem;
+    }
+
+    .projekt-aufmacher-bild {
+        width: calc(100% - 0.8rem);
+    }
+
+    .projekt-aufmacher-text {
+        position: relative;
+        right: auto;
+        bottom: auto;
+
+        width: min(680px, calc(100% - 2rem));
+        margin-top: -4rem;
+        margin-right: 1rem;
+        margin-left: auto;
+    }
+
+    .projekt-hochformat {
+        grid-template-columns:
+            minmax(280px, 0.86fr)
+            minmax(0, 1.14fr);
+
+        gap: 3.5rem;
+    }
+}
+
+
+/* ---------- Smartphone ---------- */
+
+@media (max-width: 760px) {
+    .projekt-aufmacher {
+        padding-top: 0;
+        padding-bottom: 3rem;
+    }
+
+    .projekt-aufmacher-bild::after,
+    .projekt-hochformat-bild::after {
+        top: 0.7rem;
+        right: -0.7rem;
+        bottom: -0.7rem;
+        left: 0.7rem;
+    }
+
+    .projekt-aufmacher-bild img {
+        aspect-ratio: 4 / 3;
+    }
+
+    .projekt-aufmacher-text {
+        width: calc(100% - 1.4rem);
+        margin-top: -2rem;
+        margin-right: 0.7rem;
+    }
+
+    .projekt-hochformat {
+        grid-template-columns: 1fr;
+
+        gap: 3rem;
+
+        padding-top: 4rem;
+        padding-bottom: 5rem;
+    }
+
+    .projekt-hochformat-bild {
+        width: calc(100% - 0.7rem);
+    }
+
+    .projekt-hochformat-bild img {
+        aspect-ratio: 4 / 5;
+    }
+
+    .projekt-karten-sektion {
+        padding-top: 4.5rem;
+        padding-bottom: 5rem;
+    }
+
+    .projekt-karten {
+        grid-template-columns: 1fr;
+
+        gap: 2.2rem;
+    }
+
+    .projekt-karte-quer {
+        margin-top: 0;
+    }
+
+    .projekt-karte-hoch img,
+    .projekt-karte-quer img {
+        height: auto;
+        aspect-ratio: 4 / 3;
+    }
+
+    .projekt-karte-hoch img {
+        object-position: center 35%;
+    }
+
+    .projekt-ausblick {
+        grid-template-columns: 1fr;
+
+        gap: 2rem;
+
+        padding-top: 4rem;
+        padding-bottom: 4.5rem;
+    }
+
+    .projekt-ausblick h2 {
+        margin-bottom: 0.5rem;
+    }
+}
+
+
+/* ==================================================
+   ORGELBAU
+   ================================================== */
+
+.orgelbau-einstieg {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.08fr)
+        minmax(330px, 0.92fr);
+
+    align-items: center;
+
+    gap:
+        clamp(
+            3rem,
+            7vw,
+            6.5rem
+        );
+
+    padding-top: 5rem;
+    padding-bottom: 7rem;
+}
+
+.orgelbau-einstieg-text {
+    max-width: 700px;
+}
+
+.orgelbau-einstieg-text p:last-child {
+    margin-bottom: 0;
+}
+
+.orgelbau-einstieg-bild,
+.orgelbau-bildtext-bild {
+    position: relative;
+
+    margin: 0;
+}
+
+.orgelbau-einstieg-bild::after,
+.orgelbau-bildtext-bild::after {
+    position: absolute;
+    z-index: -1;
+
+    top: 1rem;
+    right: -1rem;
+    bottom: -1rem;
+    left: 1rem;
+
+    border: 1px solid var(--holz);
+
+    content: "";
+}
+
+.orgelbau-einstieg-bild img {
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 4 / 5;
+
+    border: 1px solid var(--linie);
+
+    object-fit: cover;
+    object-position: center 58%;
+
+    box-shadow:
+        0 26px 72px rgba(0, 0, 0, 0.24);
+}
+
+.orgelbau-grundlagen {
+    padding-top: 6rem;
+    padding-bottom: 7rem;
+}
+
+.orgelbau-grundlagen-intro {
+    max-width: 760px;
+    margin-bottom: 3.5rem;
+}
+
+.orgelbau-karten {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap:
+        clamp(
+            1.2rem,
+            3vw,
+            2rem
+        );
+}
+
+.orgelbau-karten article {
+    min-height: 300px;
+
+    padding:
+        clamp(
+            1.8rem,
+            3.5vw,
+            2.8rem
+        );
+
+    border: 1px solid var(--linie);
+
+    background-color: var(--flaeche);
+    box-shadow: var(--schatten);
+}
+
+.orgelbau-karten article > span {
+    display: block;
+
+    margin-bottom: 3.5rem;
+
+    color: var(--holz);
+
+    font-family:
+        "Iowan Old Style",
+        "Palatino Linotype",
+        "Book Antiqua",
+        Palatino,
+        Georgia,
+        serif;
+
+    font-size: 1.15rem;
+    letter-spacing: 0.12em;
+}
+
+.orgelbau-karten h3 {
+    font-size:
+        clamp(
+            1.55rem,
+            2.4vw,
+            2rem
+        );
+}
+
+.orgelbau-karten p:last-child {
+    margin-bottom: 0;
+}
+
+.orgelbau-bildtext {
+    display: grid;
+
+    grid-template-columns:
+        minmax(320px, 0.82fr)
+        minmax(0, 1.18fr);
+
+    align-items: center;
+
+    gap:
+        clamp(
+            3rem,
+            8vw,
+            7rem
+        );
+
+    padding-top: 6rem;
+    padding-bottom: 7rem;
+}
+
+.orgelbau-bildtext-bild img {
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 4 / 5;
+
+    border: 1px solid var(--linie);
+
+    object-fit: cover;
+    object-position: center 48%;
+
+    box-shadow:
+        0 24px 68px rgba(0, 0, 0, 0.2);
+}
+
+.orgelbau-bildtext-text {
+    max-width: 680px;
+}
+
+.orgelbau-bildtext-text p:last-child {
+    margin-bottom: 0;
+}
+
+.orgelbau-perspektiven {
+    display: grid;
+
+    grid-template-columns:
+        minmax(250px, 0.72fr)
+        minmax(0, 1.28fr);
+
+    gap:
+        clamp(
+            2.5rem,
+            7vw,
+            6rem
+        );
+
+    padding-top: 5.5rem;
+    padding-bottom: 6.5rem;
+
+    border-top: 1px solid var(--linie);
+    border-bottom: 1px solid var(--linie);
+}
+
+.orgelbau-perspektiven h2 {
+    margin-bottom: 0;
+}
+
+.orgelbau-perspektiven > div:last-child p:last-child {
+    margin-bottom: 0;
+}
+
+.orgelbau-ausblick {
+    display: grid;
+
+    grid-template-columns:
+        auto
+        minmax(0, 1fr);
+
+    align-items: start;
+
+    gap:
+        clamp(
+            1.8rem,
+            4vw,
+            3.5rem
+        );
+
+    max-width: 920px;
+
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.orgelbau-ausblick-marke {
+    display: grid;
+
+    width: 4.6rem;
+    height: 4.6rem;
+
+    place-items: center;
+
+    border: 1px solid var(--holz);
+
+    color: var(--holz);
+
+    font-family:
+        "Iowan Old Style",
+        "Palatino Linotype",
+        "Book Antiqua",
+        Palatino,
+        Georgia,
+        serif;
+
+    font-size: 2.2rem;
+    line-height: 1;
+}
+
+.orgelbau-ausblick p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ==================================================
+   KONTAKT
+   ================================================== */
+
+.kontakt-einstieg {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.05fr)
+        minmax(320px, 0.95fr);
+
+    align-items: center;
+
+    gap:
+        clamp(
+            3rem,
+            7vw,
+            6.5rem
+        );
+
+    padding-top: 5rem;
+    padding-bottom: 7rem;
+}
+
+.kontakt-einstieg-text {
+    max-width: 690px;
+}
+
+.kontakt-einstieg-text > p:last-of-type {
+    margin-bottom: 2rem;
+}
+
+.kontakt-schnelllinks {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 0.9rem;
+}
+
+.kontakt-schnelllinks a {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+
+    padding: 0.8rem 1.15rem;
+
+    border: 1px solid var(--linie);
+
+    color: var(--text);
+    background-color: var(--flaeche);
+
+    font-weight: 700;
+    letter-spacing: 0.045em;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.kontakt-schnelllinks a:first-child {
+    color: var(--weiss);
+
+    border-color: var(--holz);
+    background-color: var(--holz);
+}
+
+.kontakt-schnelllinks a:first-child:hover {
+    color: var(--weiss);
+
+    border-color: var(--holz-dunkel);
+    background-color: var(--holz-dunkel);
+
+    transform: translateY(-2px);
+}
+
+.kontakt-schnelllinks a:not(:first-child):hover {
+    color: var(--weiss);
+
+    border-color: var(--holz);
+    background-color: var(--holz);
+
+    transform: translateY(-2px);
+}
+
+.kontakt-portrait {
+    position: relative;
+
+    margin: 0;
+}
+
+.kontakt-portrait::after {
+    position: absolute;
+    z-index: -1;
+
+    top: 1rem;
+    right: -1rem;
+    bottom: -1rem;
+    left: 1rem;
+
+    border: 1px solid var(--holz);
+
+    content: "";
+}
+
+.kontakt-portrait img {
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 4 / 5;
+
+    border: 1px solid var(--linie);
+
+    object-fit: cover;
+    object-position: center 46%;
+
+    box-shadow:
+        0 26px 72px rgba(0, 0, 0, 0.22);
+}
+
+.kontakt-wege {
+    padding-top: 6rem;
+    padding-bottom: 7rem;
+}
+
+.kontakt-wege-intro {
+    max-width: 720px;
+    margin-bottom: 3rem;
+}
+
+.kontakt-wege-karten {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap:
+        clamp(
+            1.2rem,
+            3vw,
+            2rem
+        );
+
+    font-style: normal;
+}
+
+.kontakt-weg {
+    display: grid;
+
+    grid-template-columns:
+        auto
+        minmax(0, 1fr)
+        auto;
+
+    align-items: center;
+
+    gap: 1.2rem;
+
+    min-height: 150px;
+
+    padding:
+        clamp(
+            1.5rem,
+            3vw,
+            2.2rem
+        );
+
+    border: 1px solid var(--linie);
+
+    background-color: var(--flaeche);
+    box-shadow: var(--schatten);
+
+    text-decoration: none;
+
+    transition:
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.kontakt-weg:hover {
+    border-color: var(--holz);
+
+    transform: translateY(-3px);
+}
+
+.kontakt-weg-symbol {
+    display: grid;
+
+    width: 3.6rem;
+    height: 3.6rem;
+
+    place-items: center;
+
+    border: 1px solid var(--holz);
+
+    color: var(--holz);
+
+    font-family:
+        "Iowan Old Style",
+        "Palatino Linotype",
+        "Book Antiqua",
+        Palatino,
+        Georgia,
+        serif;
+
+    font-size: 1.45rem;
+}
+
+.kontakt-weg strong,
+.kontakt-social-links strong {
+    display: block;
+
+    margin-bottom: 0.25rem;
+}
+
+.kontakt-weg small,
+.kontakt-social-links small {
+    display: block;
+
+    color: var(--text-zart);
+
+    font-size: 0.95rem;
+    overflow-wrap: anywhere;
+}
+
+.kontakt-pfeil {
+    color: var(--holz);
+
+    font-size: 1.35rem;
+}
+
+.kontakt-anfragen {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap:
+        clamp(
+            1.4rem,
+            4vw,
+            3rem
+        );
+
+    padding-top: 6rem;
+    padding-bottom: 7rem;
+}
+
+.kontakt-anfragen article {
+    padding:
+        clamp(
+            1.8rem,
+            4vw,
+            3.2rem
+        );
+
+    border-top: 1px solid var(--holz);
+    border-bottom: 1px solid var(--linie);
+}
+
+.kontakt-anfragen h3 {
+    font-size:
+        clamp(
+            1.55rem,
+            2.5vw,
+            2.1rem
+        );
+}
+
+.kontakt-anfragen p:last-child {
+    margin-bottom: 0;
+}
+
+.kontakt-social {
+    display: grid;
+
+    grid-template-columns:
+        minmax(250px, 0.78fr)
+        minmax(0, 1.22fr);
+
+    align-items: start;
+
+    gap:
+        clamp(
+            2.5rem,
+            7vw,
+            6rem
+        );
+
+    padding-top: 6rem;
+    padding-bottom: 7rem;
+
+    border-top: 1px solid var(--linie);
+}
+
+.kontakt-social-text {
+    max-width: 520px;
+}
+
+.kontakt-social-links {
+    display: grid;
+
+    gap: 1rem;
+}
+
+.kontakt-social-links a {
+    display: grid;
+
+    grid-template-columns:
+        auto
+        minmax(0, 1fr)
+        auto;
+
+    align-items: center;
+
+    gap: 1.15rem;
+
+    min-height: 92px;
+
+    padding: 1.25rem 1.45rem;
+
+    border: 1px solid var(--linie);
+
+    background-color: var(--flaeche);
+
+    text-decoration: none;
+
+    transition:
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.kontakt-social-links a:hover {
+    border-color: var(--holz);
+
+    transform: translateX(4px);
+}
+
+.kontakt-social-links .social-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+
+    color: var(--holz);
+}
+
+
+/* ---------- Tablet ---------- */
+
+@media (max-width: 980px) {
+    .orgelbau-einstieg,
+    .kontakt-einstieg {
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(280px, 0.82fr);
+
+        gap: 3.5rem;
+    }
+
+    .orgelbau-karten {
+        grid-template-columns: 1fr;
+    }
+
+    .orgelbau-karten article {
+        min-height: auto;
+    }
+
+    .orgelbau-karten article > span {
+        margin-bottom: 2rem;
+    }
+
+    .orgelbau-bildtext {
+        grid-template-columns:
+            minmax(280px, 0.82fr)
+            minmax(0, 1.18fr);
+
+        gap: 3.5rem;
+    }
+}
+
+
+/* ---------- Smartphone ---------- */
+
+@media (max-width: 760px) {
+    .orgelbau-einstieg,
+    .kontakt-einstieg,
+    .orgelbau-bildtext,
+    .orgelbau-perspektiven,
+    .kontakt-social {
+        grid-template-columns: 1fr;
+    }
+
+    .orgelbau-einstieg,
+    .kontakt-einstieg {
+        gap: 3rem;
+
+        padding-top: 4rem;
+        padding-bottom: 5rem;
+    }
+
+    .orgelbau-einstieg-bild,
+    .orgelbau-bildtext-bild,
+    .kontakt-portrait {
+        width: calc(100% - 0.7rem);
+    }
+
+    .orgelbau-einstieg-bild::after,
+    .orgelbau-bildtext-bild::after,
+    .kontakt-portrait::after {
+        top: 0.7rem;
+        right: -0.7rem;
+        bottom: -0.7rem;
+        left: 0.7rem;
+    }
+
+    .orgelbau-einstieg-bild img,
+    .orgelbau-bildtext-bild img,
+    .kontakt-portrait img {
+        aspect-ratio: 4 / 5;
+    }
+
+    .orgelbau-grundlagen,
+    .kontakt-wege {
+        padding-top: 4.5rem;
+        padding-bottom: 5rem;
+    }
+
+    .orgelbau-bildtext {
+        gap: 3rem;
+
+        padding-top: 4rem;
+        padding-bottom: 5rem;
+    }
+
+    .orgelbau-perspektiven {
+        gap: 2rem;
+
+        padding-top: 4rem;
+        padding-bottom: 4.5rem;
+    }
+
+    .orgelbau-perspektiven h2 {
+        margin-bottom: 0.5rem;
+    }
+
+    .orgelbau-ausblick {
+        grid-template-columns: 1fr;
+
+        gap: 1.8rem;
+
+        padding-top: 4.5rem;
+        padding-bottom: 4.5rem;
+    }
+
+    .kontakt-wege-karten,
+    .kontakt-anfragen {
+        grid-template-columns: 1fr;
+    }
+
+    .kontakt-weg {
+        min-height: 126px;
+    }
+
+    .kontakt-anfragen {
+        gap: 1.5rem;
+
+        padding-top: 4.5rem;
+        padding-bottom: 5rem;
+    }
+
+    .kontakt-social {
+        gap: 2.5rem;
+
+        padding-top: 4.5rem;
+        padding-bottom: 5rem;
+    }
+}
+
+
+/* ---------- Sehr kleine Bildschirme ---------- */
+
+@media (max-width: 430px) {
+    .kontakt-schnelllinks {
+        display: grid;
+    }
+
+    .kontakt-schnelllinks a {
+        width: 100%;
+    }
+
+    .kontakt-weg {
+        grid-template-columns:
+            auto
+            minmax(0, 1fr);
+    }
+
+    .kontakt-pfeil {
+        display: none;
+    }
+}
+
+
+/* ==================================================
+   ORGELBAU – WERKSTATTBILDER
+   ================================================== */
+
+.orgelbau-einstieg-bild img {
+    object-position: center center;
+}
+
+.orgelbau-mechanik,
+.orgelbau-detailsektion,
+.orgelbau-pfeifen,
+.orgelbau-schaden {
+    padding-top: 6rem;
+    padding-bottom: 7rem;
+}
+
+.orgelbau-mechanik-text,
+.orgelbau-detailsektion-intro,
+.orgelbau-pfeifen-text {
+    max-width: 780px;
+    margin-bottom: 3.2rem;
+}
+
+.orgelbau-breitbild {
+    position: relative;
+
+    width: calc(100% - 1rem);
+    margin: 0;
+}
+
+.orgelbau-breitbild::after {
+    position: absolute;
+    z-index: -1;
+
+    top: 1rem;
+    right: -1rem;
+    bottom: -1rem;
+    left: 1rem;
+
+    border: 1px solid var(--holz);
+
+    content: "";
+}
+
+.orgelbau-breitbild img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 16 / 9;
+
+    border: 1px solid var(--linie);
+
+    object-fit: cover;
+    object-position: center;
+
+    box-shadow:
+        0 24px 70px rgba(0, 0, 0, 0.2);
+}
+
+.orgelbau-detailraster {
+    display: grid;
+
+    grid-template-columns:
+        1.15fr
+        0.85fr
+        0.85fr;
+
+    align-items: start;
+
+    gap:
+        clamp(
+            1.2rem,
+            3vw,
+            2.2rem
+        );
+}
+
+.orgelbau-detailkarte {
+    overflow: hidden;
+
+    border: 1px solid var(--linie);
+
+    background-color: var(--flaeche);
+    box-shadow: var(--schatten);
+}
+
+.orgelbau-detailkarte figure {
+    margin: 0;
+
+    overflow: hidden;
+}
+
+.orgelbau-detailkarte img {
+    display: block;
+
+    width: 100%;
+    height: clamp(300px, 38vw, 520px);
+
+    object-fit: cover;
+
+    transition:
+        transform 0.45s ease;
+}
+
+.orgelbau-detailkarte:first-child img {
+    object-position: center;
+}
+
+.orgelbau-detailkarte:nth-child(2) img {
+    object-position: center 44%;
+}
+
+.orgelbau-detailkarte:nth-child(3) img {
+    object-position: center 42%;
+}
+
+.orgelbau-detailkarte:hover img {
+    transform: scale(1.025);
+}
+
+.orgelbau-detailkarte > div {
+    padding: 1.5rem 1.6rem 1.8rem;
+}
+
+.orgelbau-detailkarte h3 {
+    margin-bottom: 0;
+
+    font-size:
+        clamp(
+            1.45rem,
+            2.2vw,
+            1.9rem
+        );
+}
+
+.orgelbau-pfeifen {
+    display: grid;
+
+    grid-template-columns:
+        minmax(260px, 0.72fr)
+        minmax(0, 1.28fr);
+
+    align-items: center;
+
+    gap:
+        clamp(
+            3rem,
+            7vw,
+            6rem
+        );
+}
+
+.orgelbau-pfeifen-text {
+    margin-bottom: 0;
+}
+
+.orgelbau-bildpaar {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    align-items: end;
+
+    gap:
+        clamp(
+            1rem,
+            2.5vw,
+            1.8rem
+        );
+}
+
+.orgelbau-bildpaar figure {
+    position: relative;
+
+    margin: 0;
+}
+
+.orgelbau-bildpaar figure:first-child {
+    margin-top: 4rem;
+}
+
+.orgelbau-bildpaar figure::after {
+    position: absolute;
+    z-index: -1;
+
+    top: 0.7rem;
+    right: -0.7rem;
+    bottom: -0.7rem;
+    left: 0.7rem;
+
+    border: 1px solid var(--holz);
+
+    content: "";
+}
+
+.orgelbau-bildpaar img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 3 / 4;
+
+    border: 1px solid var(--linie);
+
+    object-fit: cover;
+    object-position: center;
+
+    box-shadow:
+        0 20px 54px rgba(0, 0, 0, 0.18);
+}
+
+.orgelbau-schaden {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.08fr)
+        minmax(300px, 0.92fr);
+
+    align-items: center;
+
+    gap:
+        clamp(
+            3rem,
+            7vw,
+            6rem
+        );
+}
+
+.orgelbau-schaden-text {
+    max-width: 680px;
+}
+
+.orgelbau-schaden-bild {
+    position: relative;
+
+    margin: 0;
+}
+
+.orgelbau-schaden-bild::after {
+    position: absolute;
+    z-index: -1;
+
+    top: 0.9rem;
+    right: -0.9rem;
+    bottom: -0.9rem;
+    left: 0.9rem;
+
+    border: 1px solid var(--holz);
+
+    content: "";
+}
+
+.orgelbau-schaden-bild img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 4 / 5;
+
+    border: 1px solid var(--linie);
+
+    object-fit: cover;
+    object-position: center;
+
+    box-shadow:
+        0 22px 60px rgba(0, 0, 0, 0.18);
+}
+
+
+/* ---------- Tablet ---------- */
+
+@media (max-width: 980px) {
+    .orgelbau-detailraster {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .orgelbau-detailkarte:first-child {
+        grid-column: 1 / -1;
+    }
+
+    .orgelbau-detailkarte:first-child img {
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    .orgelbau-pfeifen {
+        grid-template-columns:
+            minmax(230px, 0.68fr)
+            minmax(0, 1.32fr);
+
+        gap: 3rem;
+    }
+}
+
+
+/* ---------- Smartphone ---------- */
+
+@media (max-width: 760px) {
+    .orgelbau-mechanik,
+    .orgelbau-detailsektion,
+    .orgelbau-pfeifen,
+    .orgelbau-schaden {
+        padding-top: 4.5rem;
+        padding-bottom: 5rem;
+    }
+
+    .orgelbau-breitbild {
+        width: calc(100% - 0.7rem);
+    }
+
+    .orgelbau-breitbild::after {
+        top: 0.7rem;
+        right: -0.7rem;
+        bottom: -0.7rem;
+        left: 0.7rem;
+    }
+
+    .orgelbau-breitbild img {
+        aspect-ratio: 4 / 3;
+    }
+
+    .orgelbau-detailraster,
+    .orgelbau-pfeifen,
+    .orgelbau-schaden {
+        grid-template-columns: 1fr;
+    }
+
+    .orgelbau-detailkarte:first-child {
+        grid-column: auto;
+    }
+
+    .orgelbau-detailkarte img,
+    .orgelbau-detailkarte:first-child img {
+        height: auto;
+        aspect-ratio: 4 / 3;
+    }
+
+    .orgelbau-pfeifen {
+        gap: 3rem;
+    }
+
+    .orgelbau-bildpaar figure:first-child {
+        margin-top: 2rem;
+    }
+
+    .orgelbau-schaden {
+        gap: 3rem;
+    }
+
+    .orgelbau-schaden-bild {
+        width: calc(100% - 0.7rem);
+    }
+
+    .orgelbau-schaden-bild::after {
+        top: 0.7rem;
+        right: -0.7rem;
+        bottom: -0.7rem;
+        left: 0.7rem;
+    }
+}
+
+
+/* ---------- Sehr kleine Bildschirme ---------- */
+
+@media (max-width: 480px) {
+    .orgelbau-bildpaar {
+        grid-template-columns: 1fr;
+    }
+
+    .orgelbau-bildpaar figure:first-child {
+        margin-top: 0;
+    }
+
+    .orgelbau-bildpaar img {
+        aspect-ratio: 4 / 5;
+    }
+}
+
+
+/* ==================================================
+   TERMINE – KLARE KALENDERDARSTELLUNG
+   ================================================== */
+
+.termine-einstieg {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.25fr)
+        minmax(250px, 0.75fr);
+
+    align-items: center;
+
+    gap:
+        clamp(
+            3rem,
+            8vw,
+            7rem
+        );
+
+    padding-top: 5rem;
+    padding-bottom: 7rem;
+}
+
+.termine-einstieg-text {
+    max-width: 720px;
+}
+
+.termine-einstieg-text p:last-child {
+    margin-bottom: 0;
+}
+
+.termine-einstieg-marke {
+    display: grid;
+
+    min-height: 300px;
+
+    place-content: center;
+
+    padding: 2.5rem;
+
+    border: 1px solid var(--holz);
+
+    background:
+        linear-gradient(
+            135deg,
+            transparent 0%,
+            transparent 48%,
+            rgba(161, 119, 67, 0.08) 48%,
+            rgba(161, 119, 67, 0.08) 52%,
+            transparent 52%
+        ),
+        var(--flaeche);
+
+    box-shadow: var(--schatten);
+
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.termine-einstieg-marke span {
+    color: var(--text-zart);
+
+    font-size: 0.76rem;
+    font-weight: 700;
+
+    letter-spacing: 0.2em;
+}
+
+.termine-einstieg-marke strong {
+    display: block;
+
+    margin: 0.4rem 0;
+
+    color: var(--holz);
+
+    font-family:
+        "Iowan Old Style",
+        "Palatino Linotype",
+        "Book Antiqua",
+        Palatino,
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(
+            3.8rem,
+            8vw,
+            6.4rem
+        );
+
+    font-weight: 400;
+    line-height: 0.95;
+    letter-spacing: 0.02em;
+    text-transform: none;
+}
+
+
+/* ---------- Terminübersicht ---------- */
+
+.termine-uebersicht {
+    padding-top: 6rem;
+    padding-bottom: 7rem;
+}
+
+.termine-uebersicht-kopf {
+    display: flex;
+
+    align-items: end;
+    justify-content: space-between;
+
+    gap: 2rem;
+
+    padding-bottom: 2rem;
+
+    border-bottom: 1px solid var(--linie);
+}
+
+.termine-uebersicht-kopf h2 {
+    margin-bottom: 0;
+}
+
+.termine-uebersicht-kopf > p {
+    margin-bottom: 0;
+
+    color: var(--text-zart);
+
+    font-size: 0.78rem;
+    font-weight: 700;
+
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+.termine-seite .termin-liste {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 1rem;
+
+    margin-top: 2.5rem;
+}
+
+.termine-seite .termin-karte {
+    display: grid;
+
+    grid-template-columns:
+        minmax(190px, 0.48fr)
+        minmax(0, 1.52fr);
+
+    column-gap:
+        clamp(
+            2rem,
+            5vw,
+            4.5rem
+        );
+
+    padding:
+        clamp(
+            1.8rem,
+            3.5vw,
+            2.8rem
+        );
+
+    border: 1px solid var(--linie);
+
+    background-color: var(--flaeche);
+
+    box-shadow: none;
+
+    transition:
+        border-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.termine-seite .termin-karte:hover {
+    border-color: var(--holz);
+
+    box-shadow: var(--schatten);
+
+    transform: translateY(-2px);
+}
+
+.termine-seite .termin-karte::before {
+    width: 3px;
+}
+
+.termine-seite .termin-datum {
+    grid-column: 1;
+    grid-row: 1 / span 4;
+
+    align-self: stretch;
+
+    margin: 0;
+    padding-right: 2rem;
+
+    border-right: 1px solid var(--linie);
+
+    color: var(--holz) !important;
+
+    font-family:
+        "Iowan Old Style",
+        "Palatino Linotype",
+        "Book Antiqua",
+        Palatino,
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(
+            1.4rem,
+            2.5vw,
+            2rem
+        ) !important;
+
+    font-weight: 400;
+
+    line-height: 1.25;
+    letter-spacing: 0.015em;
+    text-transform: none;
+}
+
+.termine-seite .termin-karte h3,
+.termine-seite .termin-karte .termin-details,
+.termine-seite .termin-karte > p:not(.termin-datum),
+.termine-seite .termin-karte > a {
+    grid-column: 2;
+}
+
+.termine-seite .termin-karte h3 {
+    margin-bottom: 0.55rem;
+
+    font-size:
+        clamp(
+            1.55rem,
+            2.5vw,
+            2.15rem
+        );
+}
+
+.termine-seite .termin-details {
+    margin-bottom: 1rem;
+
+    color: var(--holz) !important;
+
+    font-size: 0.82rem !important;
+    font-weight: 750;
+
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.termine-seite .termin-karte > p:not(.termin-datum):not(.termin-details) {
+    max-width: 760px;
+
+    margin-bottom: 0;
+}
+
+.termine-seite .termin-karte > a {
+    justify-self: start;
+
+    margin-top: 1.25rem;
+}
+
+
+/* ---------- Leerer Zustand ---------- */
+
+.keine-termine-box {
+    max-width: 760px;
+
+    margin-top: 2.5rem;
+    padding:
+        clamp(
+            2rem,
+            5vw,
+            3.5rem
+        );
+
+    border: 1px solid var(--linie);
+
+    background-color: var(--flaeche);
+}
+
+.keine-termine-box h3 {
+    font-size:
+        clamp(
+            1.55rem,
+            2.5vw,
+            2.1rem
+        );
+}
+
+.keine-termine-box p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ---------- Hinweisbereich ---------- */
+
+.termine-hinweis {
+    display: grid;
+
+    grid-template-columns:
+        minmax(250px, 0.72fr)
+        minmax(0, 1.28fr);
+
+    gap:
+        clamp(
+            2.5rem,
+            7vw,
+            6rem
+        );
+
+    padding-top: 5rem;
+    padding-bottom: 6rem;
+
+    border-top: 1px solid var(--linie);
+    border-bottom: 1px solid var(--linie);
+}
+
+.termine-hinweis h2 {
+    margin-bottom: 0;
+}
+
+.termine-hinweis > div:last-child {
+    max-width: 690px;
+}
+
+.termine-hinweis > div:last-child p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ---------- Tablet ---------- */
+
+@media (max-width: 900px) {
+    .termine-einstieg {
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(220px, 0.58fr);
+
+        gap: 3rem;
+    }
+
+    .termine-einstieg-marke {
+        min-height: 250px;
+    }
+
+    .termine-seite .termin-karte {
+        grid-template-columns:
+            minmax(165px, 0.42fr)
+            minmax(0, 1.58fr);
+
+        column-gap: 2.5rem;
+    }
+}
+
+
+/* ---------- Smartphone ---------- */
+
+@media (max-width: 700px) {
+    .termine-einstieg {
+        grid-template-columns: 1fr;
+
+        gap: 2.5rem;
+
+        padding-top: 4rem;
+        padding-bottom: 5rem;
+    }
+
+    .termine-einstieg-marke {
+        min-height: 210px;
+    }
+
+    .termine-uebersicht {
+        padding-top: 4.5rem;
+        padding-bottom: 5rem;
+    }
+
+    .termine-uebersicht-kopf {
+        align-items: start;
+        flex-direction: column;
+
+        gap: 1rem;
+    }
+
+    .termine-seite .termin-karte {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+    .termine-seite .termin-datum {
+        grid-column: 1;
+        grid-row: auto;
+
+        margin-bottom: 1.35rem;
+        padding-right: 0;
+        padding-bottom: 1rem;
+
+        border-right: 0;
+        border-bottom: 1px solid var(--linie);
+    }
+
+    .termine-seite .termin-karte h3,
+    .termine-seite .termin-karte .termin-details,
+    .termine-seite .termin-karte > p:not(.termin-datum),
+    .termine-seite .termin-karte > a {
+        grid-column: 1;
+    }
+
+    .termine-hinweis {
+        grid-template-columns: 1fr;
+
+        gap: 2rem;
+
+        padding-top: 4rem;
+        padding-bottom: 4.5rem;
+    }
+
+    .termine-hinweis h2 {
+        margin-bottom: 0.5rem;
+    }
+}

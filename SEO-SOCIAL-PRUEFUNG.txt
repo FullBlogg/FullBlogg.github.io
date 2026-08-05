@@ -1,0 +1,19 @@
+SEO- UND SOCIAL-MEDIA-PRÜFUNG
+
+Geprüft:
+- 9 HTML-Seiten
+- individuelle Seitentitel
+- individuelle Beschreibungen
+- Robots-Anweisungen
+- Open-Graph-Metadaten
+- Twitter-Card-Metadaten
+- Social-Media-Vorschaubild: 1200 × 630 Pixel
+- strukturierte Personendaten auf der Startseite
+- robots.txt
+
+Noch offen bis zur Veröffentlichung:
+- endgültige Domain
+- absolute Social-Media-Bildadresse
+- canonical-Links
+- og:url
+- sitemap.xml

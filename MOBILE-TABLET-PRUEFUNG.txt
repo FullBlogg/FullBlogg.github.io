@@ -1,0 +1,8 @@
+MOBILE-/TABLET-PRÜFUNG
+
+HTML-Seiten mit responsive.css: 9
+Originalbilder unverändert übernommen: 31
+Landingpage enthält großen Namen und Berufsbezeichnung: ja
+Mobiles Menü: Touchflächen vergrößert
+Tablet-Hochformat: Bild-Text-Bereiche werden einspaltig
+Smartphone: Hero, Navigation, Buttons und Termine angepasst

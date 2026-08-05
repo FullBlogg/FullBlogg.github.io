@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html lang="de">
+<head>
+<meta charset="utf-8"/>
+<meta content="Felix Harren" name="author"/>
+<meta content="de_DE" property="og:locale"/>
+<meta content="website" property="og:type"/>
+<meta content="Felix Harren" property="og:site_name"/>
+<meta content="Datenschutz | Felix Harren" property="og:title"/>
+<meta content="Datenschutzhinweise zur Website von Felix Harren." property="og:description"/>
+<meta content="https://felixharren.de/bilder/social/felix-harren-vorschau.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="Felix Harren – Kirchenmusiker und Orgelbauer" property="og:image:alt"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Datenschutz | Felix Harren" name="twitter:title"/>
+<meta content="Datenschutzhinweise zur Website von Felix Harren." name="twitter:description"/>
+<meta content="https://felixharren.de/bilder/social/felix-harren-vorschau.jpg" name="twitter:image"/>
+<meta content="noindex, follow" name="robots"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Datenschutzhinweise zur Website von Felix Harren." name="description"/>
+<title>Datenschutz | Felix Harren</title>
+<script>
+        (() => {
+            const speichername = "felix-harren-theme";
+            let gespeichertesDesign = null;
+
+            try {
+                gespeichertesDesign = localStorage.getItem(speichername);
+            } catch (fehler) {
+                gespeichertesDesign = null;
+            }
+
+            const systemIstDunkel = window.matchMedia(
+                "(prefers-color-scheme: dark)"
+            ).matches;
+
+            const startDesign =
+                gespeichertesDesign === "dark" ||
+                gespeichertesDesign === "light"
+                    ? gespeichertesDesign
+                    : systemIstDunkel
+                        ? "dark"
+                        : "light";
+
+            document.documentElement.dataset.theme = startDesign;
+        })();
+    </script>
+<link href="bilder/logo/favicon-hell.png" id="favicon" rel="icon" type="image/png"/>
+<link href="bilder/logo/favicon-hell.png" id="apple-touch-icon" rel="apple-touch-icon"/>
+<meta content="#f5f5f2" id="theme-color" name="theme-color"/>
+<link href="style.css" rel="stylesheet"/>
+<link href="responsive.css" rel="stylesheet"/>
+<script defer="" src="script.js"></script>
+<link href="https://felixharren.de/datenschutz.html" rel="canonical"/><meta content="https://felixharren.de/datenschutz.html" property="og:url"/></head>
+<body>
+<header>
+<h1 class="seitenkopf-logo">
+<a aria-label="Felix Harren – Startseite" href="index.html">
+<img alt="Felix Harren – Kirchenmusiker, Orgelbauer" class="logo-hellmodus" src="bilder/logo/logo-hell-breit.png"/>
+<img alt="" aria-hidden="true" class="logo-dunkelmodus" src="bilder/logo/logo-dunkel-breit.png"/>
+</a>
+</h1>
+<button aria-controls="kopf-menue" aria-expanded="false" aria-label="Menü öffnen" class="menu-schalter" type="button">
+<span aria-hidden="true" class="menu-linien">
+<span></span>
+<span></span>
+<span></span>
+</span>
+<span class="menu-text">Menü</span>
+</button>
+<div class="kopf-aktionen" id="kopf-menue">
+<nav aria-label="Hauptnavigation">
+<a href="index.html">Startseite</a>
+<a href="ueber-mich.html">Über mich</a>
+<a href="kirchenmusik.html">Kirchenmusik</a>
+<a href="orgelbau.html">Orgelbau</a>
+<a href="projekte.html">Projekte</a>
+<a href="termine.html">Termine</a>
+<a href="kontakt.html">Kontakt</a>
+</nav>
+<button aria-label="Dunkelmodus aktivieren" class="theme-schalter" title="Farbschema wechseln" type="button">
+<span aria-hidden="true" class="theme-symbol">☾</span>
+<span class="theme-text">Dunkel</span>
+</button>
+</div>
+</header>
+<main>
+<section>
+<p>Rechtliches</p>
+<h2>Datenschutzerklärung</h2>
+<p>
+                Mit dieser Datenschutzerklärung informiere ich darüber,
+                welche personenbezogenen Daten beim Besuch dieser Website
+                und bei einer Kontaktaufnahme verarbeitet werden.
+            </p>
+</section>
+<section>
+<h2>1. Verantwortlicher</h2>
+<p>
+                Verantwortlich für die Datenverarbeitung auf dieser
+                Website ist:
+            </p>
+<p>
+                Felix Harren<br/>
+                Hans-Meiser-Straße 18<br/>
+                91126 Schwabach
+            </p>
+<p>
+                Telefon:
+                <a href="tel:+4917634452336">
+                    0176 / 34452336
+                </a>
+<br/>
+                E-Mail:
+                <a href="mailto:felix.harren@t-online.de">
+                    felix.harren@t-online.de
+                </a>
+</p>
+<p>
+<strong>Hinweis vor der Veröffentlichung:</strong><br/>
+                Die vollständige Anschrift muss noch eingesetzt werden.
+                Diese Platzhalter dürfen in der veröffentlichten Website
+                nicht stehen bleiben.
+            </p>
+</section>
+<section>
+<h2>2. Hosting über GitHub Pages</h2>
+<p>
+                Diese Website wird über den Dienst GitHub Pages
+                bereitgestellt. Anbieter ist GitHub, Inc.,
+                88 Colin P Kelly Jr Street, San Francisco,
+                California 94107, USA.
+            </p>
+<p>
+                Beim Aufruf einer über GitHub Pages bereitgestellten
+                Website verarbeitet GitHub technische Verbindungsdaten.
+                Nach Angaben von GitHub wird insbesondere die
+                IP-Adresse der Besucherinnen und Besucher zu
+                Sicherheitszwecken protokolliert und gespeichert.
+                Darüber hinaus können beispielsweise Datum und Uhrzeit
+                des Aufrufs, aufgerufene Seiten, Geräte- und
+                Browserinformationen sowie die zuvor besuchte Website
+                verarbeitet werden.
+            </p>
+<p>
+                Die Verarbeitung ist erforderlich, um die Website
+                technisch bereitzustellen, ihre Stabilität und Sicherheit
+                zu gewährleisten und Missbrauch abzuwehren. Rechtsgrundlage
+                ist Art. 6 Abs. 1 Buchstabe f DSGVO. Das berechtigte
+                Interesse liegt in der sicheren und zuverlässigen
+                Bereitstellung dieser Website.
+            </p>
+<p>
+                Eine Verarbeitung von Daten durch GitHub außerhalb der
+                Europäischen Union beziehungsweise des Europäischen
+                Wirtschaftsraums kann nicht ausgeschlossen werden.
+                Informationen zum Umgang mit personenbezogenen Daten und
+                zu internationalen Datenübermittlungen stellt GitHub in
+                seiner Datenschutzerklärung bereit:
+            </p>
+<p>
+<a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer" target="_blank">
+                    Datenschutzerklärung von GitHub öffnen
+                </a>
+</p>
+<p>
+                Auf die konkrete Speicherdauer der von GitHub
+                verarbeiteten technischen Daten habe ich keinen Einfluss.
+                Sie richtet sich nach den Vorgaben und
+                Aufbewahrungsfristen des Dienstanbieters.
+            </p>
+</section>
+<section>
+<h2>3. Hell- und Dunkelmodus</h2>
+<p>
+                Diese Website bietet einen Schalter für ein helles oder
+                dunkles Farbschema. Die gewählte Einstellung wird im
+                lokalen Speicher des Browsers unter dem Eintrag
+                <code>felix-harren-theme</code> gespeichert.
+            </p>
+<p>
+                Gespeichert wird ausschließlich die Auswahl
+                <code>light</code> oder <code>dark</code>. Die
+                Information verbleibt auf dem verwendeten Endgerät und
+                wird durch diese Website nicht an einen Server übertragen.
+                Sie dient allein dazu, das ausdrücklich gewählte
+                Farbschema bei einem späteren Besuch wiederherzustellen.
+            </p>
+<p>
+                Die Speicherung erfolgt zur Bereitstellung der von der
+                Nutzerin oder dem Nutzer gewünschten Funktion gemäß
+                § 25 Abs. 2 Nr. 2 TDDDG. Die gespeicherte Einstellung
+                kann jederzeit durch das Löschen der Website-Daten im
+                Browser entfernt werden.
+            </p>
+</section>
+<section>
+<h2>4. Kontaktaufnahme per E-Mail oder Telefon</h2>
+<p>
+                Bei einer Kontaktaufnahme per E-Mail oder Telefon werden
+                die übermittelten personenbezogenen Daten verarbeitet,
+                um die Anfrage zu bearbeiten und gegebenenfalls
+                Anschlussfragen zu beantworten.
+            </p>
+<p>
+                Dazu können insbesondere Name, Kontaktdaten,
+                Nachrichteninhalt sowie Datum und Uhrzeit der
+                Kontaktaufnahme gehören.
+            </p>
+<p>
+                Erfolgt die Anfrage im Zusammenhang mit einem möglichen
+                Auftrag oder Vertrag, ist Art. 6 Abs. 1 Buchstabe b DSGVO
+                die Rechtsgrundlage. Bei sonstigen Anfragen erfolgt die
+                Verarbeitung auf Grundlage von Art. 6 Abs. 1 Buchstabe f
+                DSGVO. Das berechtigte Interesse besteht in der
+                sachgerechten Bearbeitung eingehender Nachrichten.
+            </p>
+<p>
+                Die Daten werden gelöscht, sobald die Anfrage abschließend
+                bearbeitet wurde und keine gesetzlichen
+                Aufbewahrungspflichten oder sonstigen berechtigten Gründe
+                für eine weitere Speicherung bestehen.
+            </p>
+<p>
+                Bei der Übermittlung unverschlüsselter E-Mails kann ein
+                vollständiger Schutz der Nachricht vor dem Zugriff
+                Dritter nicht garantiert werden. Besonders vertrauliche
+                oder sensible Informationen sollten daher nicht
+                unverschlüsselt per E-Mail versendet werden.
+            </p>
+</section>
+<section>
+<h2>5. Cookies, Analyse und externe Inhalte</h2>
+<p>
+                Der eigene Quellcode dieser Website setzt keine Cookies
+                zu Analyse-, Marketing- oder Werbezwecken ein.
+            </p>
+<p>
+                Es werden derzeit keine Besucherstatistiken,
+                Tracking-Dienste, sozialen Netzwerke, externen
+                Schriftarten, Karten, Video- oder Audio-Plattformen
+                direkt in die Website eingebunden.
+            </p>
+<p>
+                Sollte die Website künftig um solche Funktionen ergänzt
+                werden, wird diese Datenschutzerklärung vor deren
+                Veröffentlichung entsprechend angepasst.
+            </p>
+</section>
+<section>
+<h2>6. Externe Links zu Instagram und YouTube</h2>
+<p>
+                Diese Website enthält reine Verlinkungen zu meinem
+                Instagram-Profil und meinem YouTube-Kanal. Beim bloßen
+                Aufruf dieser Website werden über diese Links keine
+                Inhalte der Plattformen eingebettet und keine Verbindung
+                zu deren Servern hergestellt.
+            </p>
+<p>
+                Erst wenn ein solcher Link angeklickt wird, verlassen
+                Besucherinnen und Besucher diese Website und gelangen
+                zum jeweiligen externen Anbieter. Dort gelten die
+                Datenschutzbestimmungen des jeweiligen Plattformbetreibers.
+            </p>
+<p>
+                Instagram wird von Meta Platforms Ireland Limited,
+                Merrion Road, Dublin 4, D04 X2K5, Irland, angeboten.
+                YouTube wird von Google Ireland Limited,
+                Gordon House, Barrow Street, Dublin 4, Irland,
+                angeboten.
+            </p>
+</section>
+<section>
+<h2>7. Ihre Rechte</h2>
+<p>
+                Betroffene Personen haben nach Maßgabe der gesetzlichen
+                Voraussetzungen insbesondere das Recht auf:
+            </p>
+<ul>
+<li>Auskunft über die verarbeiteten Daten,</li>
+<li>Berichtigung unrichtiger Daten,</li>
+<li>Löschung personenbezogener Daten,</li>
+<li>Einschränkung der Verarbeitung,</li>
+<li>Widerspruch gegen eine Verarbeitung,</li>
+<li>Datenübertragbarkeit sowie</li>
+<li>
+                    Beschwerde bei einer Datenschutzaufsichtsbehörde.
+                </li>
+</ul>
+<p>
+                Zur Ausübung dieser Rechte genügt eine Nachricht an die
+                oben genannte E-Mail-Adresse.
+            </p>
+</section>
+<section>
+<h2>8. Beschwerderecht</h2>
+<p>
+                Es besteht das Recht, sich bei einer
+                Datenschutzaufsichtsbehörde zu beschweren, wenn die
+                Verarbeitung personenbezogener Daten als rechtswidrig
+                angesehen wird.
+            </p>
+<p>
+                Für Verantwortliche aus dem nicht-öffentlichen Bereich
+                in Bayern ist grundsätzlich folgende Behörde zuständig:
+            </p>
+<p>
+                Bayerisches Landesamt für Datenschutzaufsicht<br/>
+                Promenade 18<br/>
+                91522 Ansbach
+            </p>
+<p>
+                Informationen und ein Online-Beschwerdeformular sind auf
+                der Website des Bayerischen Landesamtes für
+                Datenschutzaufsicht verfügbar.
+            </p>
+</section>
+<section>
+<h2>9. Automatisierte Entscheidungen</h2>
+<p>
+                Eine automatisierte Entscheidungsfindung einschließlich
+                Profiling findet auf dieser Website nicht statt.
+            </p>
+</section>
+<section>
+<h2>10. Stand und Änderungen</h2>
+<p>
+                Stand dieser Datenschutzerklärung: August 2026.
+            </p>
+<p>
+                Die Datenschutzerklärung wird angepasst, wenn sich die
+                eingesetzten Dienste oder die rechtlichen Anforderungen
+                ändern.
+            </p>
+<a href="index.html">
+                Zurück zur Startseite
+            </a>
+</section>
+</main>
+<footer>
+<p>© 2026 Felix Harren</p>
+<div class="footer-rechtliches">
+<a href="impressum.html">Impressum</a>
+<a href="datenschutz.html">Datenschutz</a>
+</div>
+<div aria-label="Social Media" class="social-links">
+<a aria-label="Instagram-Profil von Felix Harren öffnen" href="https://www.instagram.com/felixharren/" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" class="social-icon" viewbox="0 0 24 24">
+<rect fill="none" height="18" rx="5" stroke="currentColor" stroke-width="1.8" width="18" x="3" y="3"></rect>
+<circle cx="12" cy="12" fill="none" r="4.2" stroke="currentColor" stroke-width="1.8"></circle>
+<circle cx="17.4" cy="6.7" fill="currentColor" r="1.1"></circle>
+</svg>
+<span>Instagram</span>
+</a>
+<a aria-label="YouTube-Kanal von Felix Harren öffnen" href="https://www.youtube.com/@felixharren" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" class="social-icon" viewbox="0 0 24 24">
+<rect fill="none" height="13" rx="4" stroke="currentColor" stroke-width="1.8" width="19" x="2.5" y="5.5"></rect>
+<path d="M10 9l5 3-5 3z" fill="currentColor"></path>
+</svg>
+<span>YouTube</span>
+</a>
+</div>
+</footer>
+</body>
+</html>

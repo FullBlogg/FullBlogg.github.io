@@ -1,0 +1,8 @@
+TECHNISCHE PRÜFUNG
+
+Geprüfte HTML-Dateien: 9
+Übernommene und optimierte Bilder: 31
+
+Alle lokalen Bild-, CSS-, JavaScript- und Seitenverweise wurden gefunden.
+
+HTML-Grundstruktur und CSS-Klammern: ohne Auffälligkeiten.

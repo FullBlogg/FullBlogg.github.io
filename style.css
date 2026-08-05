@@ -1,0 +1,1278 @@
+/* ==================================================
+   FELIX HARREN – WEBSITE-DESIGN
+
+   Stil:
+   Schwarz · Weiß · Holzton
+   Ruhig · modern · elegant
+   ================================================== */
+
+
+/* ---------- Farben und Schriftarten ---------- */
+
+:root {
+    --hintergrund: #f5f5f2;
+    --flaeche: #ffffff;
+    --flaeche-zwei: #ebebe7;
+
+    --text: #121212;
+    --text-hell: #656560;
+
+    --dunkel: #0d0d0d;
+    --dunkel-zwei: #181818;
+    --weiss: #ffffff;
+
+    --holz: #99704c;
+    --holz-hell: #bc916a;
+    --holz-dunkel: #6f4d31;
+
+    --linie: rgba(18, 18, 18, 0.14);
+
+    --schatten:
+        0 18px 45px rgba(0, 0, 0, 0.07);
+
+    --max-breite: 1180px;
+    --header-hoehe: 84px;
+
+    --schrift-text:
+        Aptos,
+        "Segoe UI",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+
+    --schrift-ueberschrift:
+        "Iowan Old Style",
+        "Palatino Linotype",
+        "Book Antiqua",
+        Palatino,
+        Georgia,
+        serif;
+}
+
+
+/* ---------- Vorbereitung für den Dunkelmodus ---------- */
+
+
+html[data-theme="light"] {
+    color-scheme: light;
+}
+
+
+html[data-theme="dark"] {
+    color-scheme: dark;
+    --hintergrund: #0c0c0c;
+    --flaeche: #151515;
+    --flaeche-zwei: #1c1c1c;
+
+    --text: #f2f2ef;
+    --text-hell: #aaa9a4;
+
+    --dunkel: #050505;
+    --dunkel-zwei: #111111;
+
+    --holz: #b68a62;
+    --holz-hell: #cba47f;
+    --holz-dunkel: #926a48;
+
+    --linie: rgba(255, 255, 255, 0.15);
+
+    --schatten:
+        0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+
+/* ---------- Grundeinstellungen ---------- */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    color: var(--text);
+    background-color: var(--hintergrund);
+
+    font-family: var(--schrift-text);
+    font-size: 1rem;
+    line-height: 1.72;
+    letter-spacing: 0.012em;
+
+    transition:
+        color 0.3s ease,
+        background-color 0.3s ease;
+}
+
+body,
+header,
+section,
+footer,
+.termin-karte {
+    transition:
+        color 0.3s ease,
+        background-color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+::selection {
+    color: var(--weiss);
+    background-color: var(--holz);
+}
+
+
+/* ---------- Texte ---------- */
+
+h1,
+h2,
+h3 {
+    margin-top: 0;
+
+    font-family: var(--schrift-ueberschrift);
+    font-weight: 400;
+    line-height: 1.18;
+    letter-spacing: 0.018em;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    max-width: 760px;
+    margin-bottom: 1.7rem;
+
+    font-size:
+        clamp(
+            1.8rem,
+            3.2vw,
+            2.85rem
+        );
+}
+
+h3 {
+    margin-bottom: 1rem;
+
+    font-size:
+        clamp(
+            1.3rem,
+            2vw,
+            1.65rem
+        );
+
+    letter-spacing: 0.015em;
+}
+
+p {
+    max-width: 760px;
+    margin-top: 0;
+    margin-bottom: 1.35rem;
+
+    color: var(--text-hell);
+    font-size: 1.04rem;
+    letter-spacing: 0.014em;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a,
+button {
+    -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--holz);
+    outline-offset: 5px;
+}
+
+
+/* ---------- Kopfbereich ---------- */
+
+header {
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+
+    display: flex;
+    min-height: var(--header-hoehe);
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 2rem;
+
+    padding:
+        1rem
+        max(5vw, 1.5rem);
+
+    border-bottom: 1px solid var(--linie);
+
+    background-color: var(--hintergrund);
+
+    backdrop-filter: blur(16px);
+}
+
+header h1 a {
+    display: inline-block;
+
+    color: var(--text);
+
+    font-family: var(--schrift-text);
+    font-size: 0.95rem;
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+header h1 a:hover {
+    color: var(--holz);
+    transform: translateY(-1px);
+}
+
+
+/* ---------- Navigation ---------- */
+
+nav {
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 1.4rem;
+}
+
+nav a {
+    position: relative;
+
+    padding: 0.55rem 0;
+
+    color: var(--text);
+
+    font-size: 0.8rem;
+    font-weight: 650;
+
+    letter-spacing: 0.075em;
+    text-transform: uppercase;
+
+    transition: color 0.2s ease;
+}
+
+nav a::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    height: 2px;
+
+    background-color: var(--holz);
+
+    content: "";
+
+    transform: scaleX(0);
+    transform-origin: right;
+
+    transition: transform 0.25s ease;
+}
+
+nav a:hover {
+    color: var(--holz);
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+nav a[aria-current="page"] {
+    color: var(--holz);
+}
+
+nav a[aria-current="page"]::after {
+    transform: scaleX(1);
+}
+
+
+/* ---------- Hauptinhalt ---------- */
+
+main {
+    overflow: hidden;
+}
+
+main > section {
+    position: relative;
+
+    width:
+        min(
+            calc(100% - 3rem),
+            var(--max-breite)
+        );
+
+    margin: 0 auto;
+    padding: 6rem 0;
+
+    border-bottom: 1px solid var(--linie);
+}
+
+main > section:last-child {
+    border-bottom: 0;
+}
+
+
+/* ---------- Erster Bereich jeder Seite ---------- */
+
+main > section:first-child {
+    color: var(--weiss);
+    background-color: var(--dunkel);
+
+    box-shadow:
+        0 0 0 100vmax var(--dunkel);
+
+    clip-path:
+        inset(0 -100vmax);
+}
+
+main > section:first-child p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+main > section:first-child > p:first-child {
+    color: var(--holz-hell);
+}
+
+
+/* ---------- Landingpage ---------- */
+
+#start {
+    display: flex;
+
+    min-height:
+        calc(
+            60vh - var(--header-hoehe)
+        );
+
+    flex-direction: column;
+    justify-content: center;
+
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+}
+
+#start h2 {
+    max-width: 740px;
+    margin-bottom: 1.8rem;
+
+    font-size:
+        clamp(
+            2.15rem,
+            4vw,
+            3.45rem
+        );
+
+    font-weight: 400;
+    line-height: 1.16;
+    letter-spacing: 0.022em;
+}
+
+#start p {
+    max-width: 630px;
+
+    font-size:
+        clamp(
+            1.03rem,
+            1.5vw,
+            1.16rem
+        );
+
+    letter-spacing: 0.016em;
+}
+
+
+/* ---------- Kleine Bereichsüberschriften ---------- */
+
+main > section > p:first-child:not(:only-child) {
+    margin-bottom: 1.2rem;
+
+    color: var(--holz);
+
+    font-family: var(--schrift-text);
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+
+/* ---------- Links und Schaltflächen ---------- */
+
+main section > a {
+    display: inline-flex;
+
+    min-height: 50px;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 1rem;
+    padding: 0.75rem 1.4rem;
+
+    border: 1px solid var(--text);
+
+    color: var(--text);
+    background-color: transparent;
+
+    font-size: 0.78rem;
+    font-weight: 700;
+
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+main section > a:hover {
+    color: var(--weiss);
+
+    border-color: var(--holz);
+    background-color: var(--holz);
+
+    transform: translateY(-2px);
+}
+
+main > section:first-child > a {
+    color: var(--weiss);
+    border-color: rgba(255, 255, 255, 0.65);
+}
+
+main > section:first-child > a:hover {
+    border-color: var(--holz);
+    background-color: var(--holz);
+}
+
+
+/* ---------- Inhaltsbereiche ---------- */
+
+main > section:not(:first-child) h2 {
+    max-width: 740px;
+}
+
+main > section:not(:first-child) p {
+    max-width: 720px;
+}
+
+main > section:nth-child(odd):not(:first-child) {
+    background-color: var(--flaeche);
+
+    box-shadow:
+        0 0 0 100vmax var(--flaeche);
+
+    clip-path:
+        inset(0 -100vmax);
+}
+
+
+/* ---------- Kontaktbereiche ---------- */
+
+#kontakt {
+    text-align: center;
+}
+
+#kontakt h2,
+#kontakt p {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#kontakt > a {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+/* ---------- Termine ---------- */
+
+.termin-liste {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+
+    gap: 1.5rem;
+
+    margin-top: 3rem;
+}
+
+.termin-karte {
+    position: relative;
+
+    padding: 2rem;
+
+    border: 1px solid var(--linie);
+
+    background-color: var(--flaeche);
+
+    box-shadow: var(--schatten);
+
+    overflow: hidden;
+}
+
+.termin-karte::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background-color: var(--holz);
+
+    content: "";
+}
+
+.termin-karte h3 {
+    margin-bottom: 0.8rem;
+}
+
+.termin-karte p {
+    font-size: 1rem;
+}
+
+.termin-datum {
+    margin-bottom: 1rem;
+
+    color: var(--holz) !important;
+
+    font-family: var(--schrift-text);
+    font-size: 0.75rem !important;
+    font-weight: 700;
+
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+.termin-details {
+    color: var(--text) !important;
+    font-weight: 650;
+}
+
+.termin-karte a {
+    display: inline-block;
+
+    margin-top: 0.5rem;
+
+    color: var(--holz);
+
+    font-size: 0.78rem;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.termin-karte a:hover {
+    color: var(--holz-dunkel);
+}
+
+
+/* ---------- Fußbereich ---------- */
+
+footer {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 1.8rem;
+
+    padding:
+        2.4rem
+        max(5vw, 1.5rem);
+
+    border-top: 1px solid var(--linie);
+
+    background-color: var(--flaeche);
+}
+
+footer p {
+    margin: 0;
+
+    color: var(--text-hell);
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+}
+
+footer a {
+    color: var(--text);
+
+    font-size: 0.76rem;
+    font-weight: 650;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    transition: color 0.2s ease;
+}
+
+footer a:hover {
+    color: var(--holz);
+}
+
+
+/* ---------- Tablet ---------- */
+
+@media (max-width: 1050px) {
+    header {
+        align-items: flex-start;
+        flex-direction: column;
+
+        gap: 0.8rem;
+    }
+
+    nav {
+        width: 100%;
+
+        justify-content: flex-start;
+        flex-wrap: wrap;
+
+        gap: 0.4rem 1.25rem;
+    }
+
+    main > section {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    .termin-liste {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ---------- Smartphone ---------- */
+
+@media (max-width: 700px) {
+    :root {
+        --header-hoehe: auto;
+    }
+
+    header {
+        position: relative;
+
+        padding-top: 1.3rem;
+        padding-bottom: 1.3rem;
+    }
+
+    header h1 a {
+        font-size: 0.88rem;
+    }
+
+    nav {
+        gap: 0.15rem 1rem;
+    }
+
+    nav a {
+        font-size: 0.7rem;
+    }
+
+    main > section {
+        width:
+            min(
+                calc(100% - 2rem),
+                var(--max-breite)
+            );
+
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    #start {
+        min-height: 52vh;
+
+        padding-top: 3.8rem;
+        padding-bottom: 3.8rem;
+    }
+
+    #start h2 {
+        font-size:
+            clamp(
+                1.95rem,
+                9vw,
+                2.75rem
+            );
+
+        line-height: 1.18;
+        letter-spacing: 0.018em;
+    }
+
+    h2 {
+        font-size:
+            clamp(
+                1.7rem,
+                7.5vw,
+                2.35rem
+            );
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    main section > a {
+        width: 100%;
+    }
+
+    .termin-karte {
+        padding: 1.6rem;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 0.8rem;
+
+        text-align: center;
+    }
+}
+
+
+/* ---------- Reduzierte Bewegungen ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+
+        transition-duration:
+            0.01ms !important;
+
+        animation-duration:
+            0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+    }
+}
+
+
+/* ---------- Kopfzeile: Navigation und Farbschalter ---------- */
+
+.kopf-aktionen {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.4rem;
+}
+
+.theme-schalter {
+    display: inline-flex;
+    min-height: 40px;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+
+    padding: 0.55rem 0.85rem;
+
+    border: 1px solid var(--linie);
+    border-radius: 999px;
+
+    color: var(--text);
+    background-color: var(--flaeche);
+
+    font-family: var(--schrift-text);
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.theme-schalter:hover {
+    color: var(--weiss);
+    border-color: var(--holz);
+    background-color: var(--holz);
+    transform: translateY(-1px);
+}
+
+.theme-symbol {
+    display: inline-flex;
+    width: 1rem;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1rem;
+    line-height: 1;
+}
+
+
+/* ---------- Farbschalter auf kleineren Bildschirmen ---------- */
+
+@media (max-width: 1050px) {
+    .kopf-aktionen {
+        width: 100%;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .kopf-aktionen nav {
+        width: auto;
+        flex: 1;
+    }
+
+    .theme-schalter {
+        flex: 0 0 auto;
+    }
+}
+
+@media (max-width: 700px) {
+    .kopf-aktionen {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .kopf-aktionen nav {
+        width: 100%;
+    }
+
+    .theme-schalter {
+        align-self: flex-start;
+    }
+}
+
+
+/* ==================================================
+   MOBILES MENÜ
+   ================================================== */
+
+.menu-schalter {
+    display: none;
+    min-height: 42px;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+
+    padding: 0.55rem 0.8rem;
+
+    border: 1px solid var(--linie);
+    border-radius: 999px;
+
+    color: var(--text);
+    background-color: var(--flaeche);
+
+    font-family: var(--schrift-text);
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.menu-schalter:hover {
+    color: var(--weiss);
+    border-color: var(--holz);
+    background-color: var(--holz);
+}
+
+.menu-linien {
+    display: inline-flex;
+    width: 18px;
+    height: 14px;
+
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-linien span {
+    display: block;
+    width: 100%;
+    height: 1.5px;
+
+    background-color: currentColor;
+
+    transform-origin: center;
+
+    transition:
+        transform 0.25s ease,
+        opacity 0.2s ease;
+}
+
+.menu-schalter[aria-expanded="true"] .menu-linien span:nth-child(1) {
+    transform: translateY(6.25px) rotate(45deg);
+}
+
+.menu-schalter[aria-expanded="true"] .menu-linien span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-schalter[aria-expanded="true"] .menu-linien span:nth-child(3) {
+    transform: translateY(-6.25px) rotate(-45deg);
+}
+
+
+/* ---------- Eingeklappte Navigation ---------- */
+
+@media (max-width: 900px) {
+    header {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+
+        gap: 0.9rem 1rem;
+
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    header h1 {
+        min-width: 0;
+    }
+
+    .menu-schalter {
+        display: inline-flex;
+    }
+
+    .kopf-aktionen {
+        grid-column: 1 / -1;
+
+        display: none;
+        width: 100%;
+
+        align-items: stretch;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        gap: 1.1rem;
+
+        padding-top: 0.6rem;
+        padding-bottom: 0.35rem;
+    }
+
+    .kopf-aktionen.is-open {
+        display: flex;
+    }
+
+    .kopf-aktionen nav {
+        display: flex;
+        width: 100%;
+
+        align-items: stretch;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        gap: 0;
+    }
+
+    .kopf-aktionen nav a {
+        width: 100%;
+
+        padding: 0.85rem 0;
+
+        border-bottom: 1px solid var(--linie);
+
+        font-size: 0.76rem;
+    }
+
+    .kopf-aktionen nav a:first-child {
+        border-top: 1px solid var(--linie);
+    }
+
+    .kopf-aktionen nav a::after {
+        right: auto;
+        width: 34px;
+    }
+
+    .theme-schalter {
+        align-self: flex-start;
+    }
+}
+
+
+/* ---------- Sehr kleine Bildschirme ---------- */
+
+@media (max-width: 430px) {
+    header h1 a {
+        font-size: 0.78rem;
+        letter-spacing: 0.1em;
+    }
+
+    .menu-schalter {
+        min-height: 40px;
+        padding-right: 0.7rem;
+        padding-left: 0.7rem;
+    }
+
+    .menu-text {
+        display: none;
+    }
+}
+
+
+/* ==================================================
+   STARTSEITE: TERMINE UND REDUZIERTER AUFBAU
+   ================================================== */
+
+.start-termin-liste {
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0, 1fr)
+        );
+}
+
+#termine > a {
+    margin-top: 2rem;
+}
+
+@media (max-width: 1050px) {
+    .start-termin-liste {
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+    }
+}
+
+@media (max-width: 700px) {
+    .start-termin-liste {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ==================================================
+   SOCIAL-MEDIA-LINKS
+   ================================================== */
+
+.footer-rechtliches,
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.3rem;
+}
+
+.social-links a,
+.social-profile-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+}
+
+.social-icon {
+    width: 1.15rem;
+    height: 1.15rem;
+    flex: 0 0 auto;
+}
+
+.social-links a {
+    color: var(--text);
+
+    font-size: 0.76rem;
+    font-weight: 650;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.social-links a:hover {
+    color: var(--holz);
+    transform: translateY(-1px);
+}
+
+.social-profile-links {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    margin-top: 2rem;
+}
+
+.social-profile-links a {
+    min-height: 52px;
+
+    padding: 0.8rem 1.2rem;
+
+    border: 1px solid var(--linie);
+
+    color: var(--text);
+    background-color: var(--flaeche);
+
+    font-size: 0.84rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.social-profile-links a:hover {
+    color: var(--weiss);
+    border-color: var(--holz);
+    background-color: var(--holz);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 800px) {
+    footer {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 520px) {
+    .footer-rechtliches,
+    .social-links {
+        flex-wrap: wrap;
+        gap: 0.8rem 1.2rem;
+    }
+
+    .social-profile-links {
+        flex-direction: column;
+    }
+
+    .social-profile-links a {
+        width: 100%;
+    }
+}
+
+
+/* ==================================================
+   LOGO IM KOPFBEREICH
+   ================================================== */
+
+.seitenkopf-logo {
+    flex: 0 0 auto;
+    margin: 0;
+}
+
+.seitenkopf-logo a {
+    display: block;
+    line-height: 0;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
+
+.seitenkopf-logo a:hover {
+    opacity: 0.88;
+    transform: translateY(-1px);
+}
+
+.seitenkopf-logo img {
+    display: block;
+    width: clamp(180px, 18vw, 250px);
+    height: auto;
+    max-height: 72px;
+
+    object-fit: contain;
+    object-position: left center;
+}
+
+.logo-dunkelmodus {
+    display: none !important;
+}
+
+html[data-theme="dark"] .logo-hellmodus {
+    display: none !important;
+}
+
+html[data-theme="dark"] .logo-dunkelmodus {
+    display: block !important;
+}
+
+/* Frühere Regeln für das reine Textlogo neutralisieren. */
+
+header h1 a {
+    color: inherit;
+    font: inherit;
+    letter-spacing: normal;
+    text-transform: none;
+}
+
+
+/* ---------- Logo auf kleineren Bildschirmen ---------- */
+
+@media (max-width: 1050px) {
+    .seitenkopf-logo img {
+        width: clamp(170px, 25vw, 220px);
+        max-height: 64px;
+    }
+}
+
+@media (max-width: 700px) {
+    .seitenkopf-logo img {
+        width: 165px;
+        max-height: 54px;
+    }
+}
+
+@media (max-width: 430px) {
+    .seitenkopf-logo img {
+        width: 145px;
+        max-height: 48px;
+    }
+}
