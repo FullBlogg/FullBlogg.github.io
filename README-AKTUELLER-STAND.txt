@@ -34,13 +34,13 @@ EINSETZEN:
 6. Alle Seiten sowie Hell-/Dunkelmodus auf Desktop und Smartphone prüfen.
 
 BILDORDNER:
-bilder/logo
-bilder/portraits
-bilder/orgel
-bilder/orgelbau
-bilder/ensembles
-bilder/konzerte
-bilder/presse
+Bilder/Logo
+Bilder/portraits
+Bilder/orgel
+Bilder/orgelbau
+Bilder/ensembles
+Bilder/konzerte
+Bilder/presse
 
 
 SEO UND SOCIAL MEDIA:

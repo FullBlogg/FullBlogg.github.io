@@ -63,8 +63,8 @@ function seitensymboleAktualisieren(design) {
     const istDunkel = design === "dark";
 
     const faviconPfad = istDunkel
-        ? "bilder/logo/favicon-dunkel.png"
-        : "bilder/logo/favicon-hell.png";
+        ? "Bilder/Logo/favicon-dunkel.png"
+        : "Bilder/Logo/favicon-hell.png";
 
     if (favicon) {
         favicon.href = faviconPfad;

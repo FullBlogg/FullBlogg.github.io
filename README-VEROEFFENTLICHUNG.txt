@@ -37,5 +37,5 @@ GITHUB:
 6. Erst danach die DNS-Einträge bei Wix ändern.
 
 Nicht den übergeordneten Ordner hochladen, sondern dessen Inhalt:
-index.html, style.css, bilder/, CNAME usw. müssen direkt im
+index.html, style.css, Bilder/, CNAME usw. müssen direkt im
 Stamm des Repositorys liegen.

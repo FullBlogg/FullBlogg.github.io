@@ -40,7 +40,7 @@
             rgba(0, 0, 0, 0.18) 0%,
             rgba(0, 0, 0, 0.28) 100%
         ),
-        url("bilder/orgel/orgel-speyer-quer.JPG");
+        url("Bilder/orgel/orgel-speyer-quer.JPG");
 
     background-position: center bottom;
     background-repeat: no-repeat;
@@ -194,7 +194,7 @@
                 rgba(4, 4, 4, 0.58) 43%,
                 rgba(4, 4, 4, 0.94) 100%
             ),
-            url("bilder/orgel/orgel-speyer-quer.JPG");
+            url("Bilder/orgel/orgel-speyer-quer.JPG");
 
         background-position: 58% bottom;
     }

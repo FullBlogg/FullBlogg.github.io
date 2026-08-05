@@ -1,13 +1,13 @@
 BILDER – HINWEISE ZUR VERÖFFENTLICHUNG
 
 Momentan nicht auf der Website eingebaut, aber im Paket enthalten:
-- bilder/orgelbau/wellenbrett-quer.jpg
-- bilder/orgelbau/enger-arbeitsplatz-quer.jpg
-- bilder/orgelbau/bleikondukten-einleimen-hoch.JPG
-- bilder/portraits/felix-portrait-sitzend-hoch.JPG
-- bilder/orgel/felix-an-orgel-locker-hoch.JPG
-- bilder/orgel/orgel-regensburg-quer.JPG
-- bilder/presse/presse-cantart-adventskonzert.JPG
+- Bilder/orgelbau/wellenbrett-quer.jpg
+- Bilder/orgelbau/enger-arbeitsplatz-quer.jpg
+- Bilder/orgelbau/bleikondukten-einleimen-hoch.JPG
+- Bilder/portraits/felix-portrait-sitzend-hoch.JPG
+- Bilder/orgel/felix-an-orgel-locker-hoch.JPG
+- Bilder/orgel/orgel-regensburg-quer.JPG
+- Bilder/presse/presse-cantart-adventskonzert.JPG
 
 Bei diesen Aufnahmen bitte besonders prüfen:
 - erkennbare weitere Personen
