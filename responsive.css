@@ -562,6 +562,28 @@ header {
     }
 }
 
+/* Startbild auf großen Bildschirmen besser sichtbar */
+@media (min-width: 851px) {
+    #start.start-mit-bild::before {
+        background-image:
+            linear-gradient(
+                90deg,
+                rgba(3, 3, 3, 0.82) 0%,
+                rgba(3, 3, 3, 0.62) 38%,
+                rgba(3, 3, 3, 0.22) 68%,
+                rgba(3, 3, 3, 0.12) 100%
+            ),
+            linear-gradient(
+                180deg,
+                rgba(0, 0, 0, 0.06) 0%,
+                rgba(0, 0, 0, 0.18) 100%
+            ),
+            url("Bilder/orgel/orgel-speyer-quer.JPG");
+
+        background-position: center bottom;
+        background-size: cover;
+    }
+}
 
 /* ==================================================
    404-SEITE
