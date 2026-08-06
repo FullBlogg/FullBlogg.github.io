@@ -2389,3 +2389,12 @@
         margin-bottom: 0.5rem;
     }
 }
+
+/* Bildnachweise */
+.bildnachweis {
+    margin: 0.45rem 0 0;
+    font-size: 0.72rem;
+    line-height: 1.4;
+    letter-spacing: 0.04em;
+    color: var(--text-zurueckhaltend);
+}
